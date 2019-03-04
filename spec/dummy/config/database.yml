@@ -1,0 +1,11 @@
+default: &default
+  adapter: sqlite3
+  database: ":memory:"
+  serverless:
+    timeout: 10.0
+
+test:
+  <<: *default
+api_read_only:
+  test:
+    <<: *default
